@@ -1,0 +1,36 @@
+{
+  "languages": [
+    {
+      "code": "EN",
+      "name": "English",
+      "flag": "https://otithee.com/img/flag/US.svg"
+    },
+    {
+      "code": "AR",
+      "name": "Arabic",
+      "flag": "https://otithee.com/img/flag/AE.svg"
+    },
+    {
+        "code": "BD",
+        "name": "Bangla",
+        "flag": "https://otithee.com/img/flag/BD.svg"
+    }
+  ],
+  "currencies": [
+    {
+      "code": "BDT",
+      "symbol": "৳",
+      "name": "Bangladeshi Taka"
+    },
+    {
+      "code": "USD",
+      "symbol": "$",
+      "name": "US Dollar"
+    },
+    {
+      "code": "EUR",
+      "symbol": "€",
+      "name": "Euro"
+    }
+  ]
+}
