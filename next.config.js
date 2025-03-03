@@ -8,6 +8,8 @@ const nextConfig = {
         pathname: "/img/**",
       },
     ],
+    domains: ["localhost"],
+    unoptimized: true,
   },
 };
 

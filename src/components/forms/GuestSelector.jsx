@@ -8,7 +8,7 @@ const GuestSelector = ({ adults, children, rooms, onChange }) => {
   return (
     <div className="relative">
       <button
-        className="w-full p-3 border rounded mt-1 text-left"
+        className="w-full p-3.5 border rounded mt-1 text-left text-sm border-gray-500"
         onClick={toggleDropdown}
         aria-expanded={isOpen}
         aria-controls="guest-selector-dropdown"

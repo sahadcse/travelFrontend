@@ -1,0 +1,190 @@
+/* Custom styles for enhanced design */
+
+/* General styles */
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #10b981;
+  --accent-color: #f59e0b;
+  --text-dark: #1f2937;
+  --text-light: #f3f4f6;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+}
+
+/* Section styling */
+.section-spacing {
+  padding: 5rem 0;
+}
+
+.section-heading {
+  position: relative;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* Card styling */
+.offer-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.offer-card .image-container {
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.offer-card img {
+  transition: var(--transition);
+  object-fit: cover;
+}
+
+.offer-card:hover img {
+  transform: scale(1.05);
+}
+
+.offer-card .content {
+  padding: 1.5rem;
+  background: white;
+}
+
+.offer-card .offer-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent-color);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  z-index: 10;
+}
+
+.offer-card .offer-price {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+}
+
+.offer-card .offer-location {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.75rem;
+}
+
+.offer-card .offer-location svg {
+  margin-right: 0.375rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Swiper customizations */
+.swiper-button-prev,
+.swiper-button-next {
+  background: white;
+  border-radius: 50%;
+  width: 40px !important;
+  height: 40px !important;
+  box-shadow: var(--shadow-md);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.25rem !important;
+  color: var(--text-dark);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color) !important;
+}
+
+/* Container style */
+.custom-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Footer styling */
+.footer {
+  background: var(--text-dark);
+  color: var(--text-light);
+  padding: 4rem 0 2rem;
+}
+
+.footer h4 {
+  position: relative;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+}
+
+.footer h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--accent-color);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #9ca3af;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--text-light);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}

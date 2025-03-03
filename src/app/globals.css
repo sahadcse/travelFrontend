@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://geist-fonts.vercel.app/stylesheet.css');
-
+@import url("https://geist-fonts.vercel.app/stylesheet.css");
 
 :root {
   --background: #ffffff;
@@ -22,14 +21,30 @@
 
 html {
   scroll-behavior: smooth;
+  @apply text-base font-sans antialiased;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: "Roboto", sans-serif;
+@layer base {
+  body {
+    @apply bg-background text-foreground text-xs
+  }
 }
 
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+}
+
+/* Responsive logo classes */
 .mini_logo {
   display: none;
 }
@@ -49,9 +64,11 @@ input[type="date"],
 input[type="number"],
 input[type="time"],
 select {
-  @apply w-full p-3 border rounded mt-1 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none;
+  @apply w-full p-3 border rounded mt-1 focus:ring-2 focus:ring-primary focus:border-transparent outline-none;
 }
 
 button {
   @apply transition-colors duration-200;
 }
+
+

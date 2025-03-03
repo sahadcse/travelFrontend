@@ -79,7 +79,7 @@ const TransportForm = ({
   ];
 
   const renderCategoryButtons = () => (
-    <div className="flex flex-wrap justify-center gap-2 p-2">
+    <div className="flex md:flex-wrap justify-center gap-2 md:p-2">
       {categories.map(({ id, Icon, label, desc, bgColor }) => (
         <button
           key={id}
@@ -97,9 +97,9 @@ const TransportForm = ({
   );
 
   const renderTripForm = () => (
-    <div className="p-1 space-y-1">
-      <div className="flex justify-between items-center gap-1">
-        <div className="flex justify-center gap-1 items-center">
+    <div className="p-1 space-y-4">
+      <div className="flex flex-col md:flex-row justify-between md:items-center gap-1">
+        <div className="flex justify-center flex-col md:flex-row gap-1 md:items-center">
           <span className="text-sm font-semibold">Trip Type:</span>
           {tripTypes.map((type) => (
             <button
@@ -115,7 +115,7 @@ const TransportForm = ({
             </button>
           ))}
         </div>
-        <div className="flex justify-center gap-1 mt-2 items-center">
+        <div className="flex justify-center flex-col md:flex-row gap-1 mt-2 md:items-center">
           <span className="text-sm font-semibold">Transport Type:</span>
           {transportTypes.map(({ id, label, icon }) => (
             <button
@@ -257,10 +257,10 @@ const TransportForm = ({
   );
 
   return (
-    <>
+    <section className="">
       {renderCategoryButtons()}
       {transportCategory === "trip" ? renderTripForm() : renderPackageForm()}
-    </>
+    </section>
   );
 };
 

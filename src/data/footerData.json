@@ -1,0 +1,77 @@
+{
+  "contactInfo": {
+    "title": "Contact Us",
+    "customerCare": {
+      "label": "Customer Care",
+      "phone": "+88 017466-69174"
+    },
+    "address": {
+      "label": "Address",
+      "text": "Mollahpara, Tatipara, Magura Sadar, Magura, Bangladesh"
+    }
+  },
+  "quickLinks": {
+    "title": "Quick Links",
+    "links": [
+      { "label": "Log In", "href": "/auth/login" },
+      { "label": "Register", "href": "/auth/signup" },
+      { "label": "About Us", "href": "/aboutus" },
+      { "label": "Payment", "href": "/payments" },
+      { "label": "Account Delete", "href": "/account/delete" }
+    ]
+  },
+  "customerCare": {
+    "title": "Customer Care",
+    "links": [
+      { "label": "Contact", "href": "/contact-us" },
+      { "label": "Privacy Policy", "href": "/privacy-policy" },
+      { "label": "Terms & Conditions", "href": "/terms-and-condition" },
+      { "label": "FAQ", "href": "/faq" }
+    ]
+  },
+  "mobileApps": {
+    "title": "Mobile",
+    "appStore": {
+      "label": "App Store",
+      "subtitle": "Download on the",
+      "href": "#"
+    },
+    "googlePlay": {
+      "label": "Google Play",
+      "subtitle": "Get it on",
+      "href": "#"
+    }
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Subscribe to our newsletter for the latest updates and offers.",
+    "buttonText": "Subscribe"
+  },
+  "copyright": "© 2025 sahad.com All rights reserved.",
+  "socialMedia": [
+    {
+      "platform": "Facebook",
+      "icon": "FaFacebookF",
+      "color": "#1877F2",
+      "href": "https://www.facebook.com/sahad.cse/"
+    },
+    {
+      "platform": "YouTube",
+      "icon": "FaYoutube",
+      "color": "#FF0000",
+      "href": "#"
+    },
+    {
+      "platform": "Instagram",
+      "icon": "FaInstagram",
+      "color": "#fd1d1d",
+      "href": "#"
+    },
+    {
+      "platform": "LinkedIn",
+      "icon": "FaLinkedinIn",
+      "color": "#0077B5",
+      "href": "https://www.linkedin.com/in/sahaduzzaman-cse/"
+    }
+  ]
+}

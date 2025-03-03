@@ -16,7 +16,7 @@ const MenuItems = () => (
       { title: "Transports", href: "/?service=transport" },
     ].map((item) => (
       <li key={item.title}>
-        <Link href={item.href} className="hover:text-indigo-500">
+        <Link href={item.href} className="hover:text-indigo-500 text-base">
           {item.title}
         </Link>
       </li>
@@ -63,7 +63,7 @@ const PublicNav = () => {
             <div className="items-center flex">
               <Link href="/" className="header-logo mr-5">
                 <Image
-                  src="https://otithee.com/img/logo/logo.png"
+                  src="https://sahad.vercel.app/siteLogos/editlogo2.png"
                   alt="logo icon"
                   width={140}
                   height={27}
@@ -166,16 +166,18 @@ const PublicNav = () => {
               </Link>
 
               {/* Mobile Menu Button */}
-              <button
-                className="md:hidden"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              >
-                {isMobileMenuOpen ? (
-                  <XMarkIcon className="h-6 w-6" />
-                ) : (
-                  <Bars3Icon className="h-6 w-6" />
-                )}
-              </button>
+              {isMenuVisible && (
+                <button
+                  className="md:hidden"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                  {isMobileMenuOpen ? (
+                    <XMarkIcon className="h-6 w-6" />
+                  ) : (
+                    <Bars3Icon className="h-6 w-6" />
+                  )}
+                </button>
+              )}
             </div>
           </div>
         </div>
