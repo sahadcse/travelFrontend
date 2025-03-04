@@ -201,10 +201,10 @@ const TransportForm = ({
         {packageTypes
           .filter(({ id }) => id === packageType)
           .map(({ id, description, startingPrice, features }) => (
-            <div key={id} className=" p-1 flex bg-emerald-200 px-3 justify-between w-1/3">
+            <div key={id} className=" p-1 flex flex-col md:flex-row bg-emerald-200 px-3 justify-between md:w-1/3">
               <div className="">
                 {/* Description */}
-                <p className="text-xs leading-tight">{description}</p>
+                <p className="text-xs leading-tight capitalize">{description}</p>
                 {/* Price */}
                 <div className="mt-0.5 flex items-center gap-1">
                   <span className="text-xs">Starting from</span>

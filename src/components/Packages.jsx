@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
+import { Navigation, Pagination, EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -174,12 +174,12 @@ export default function Package() {
           <div className="swiper-button-prev !w-10 !h-10 rounded-full !text-blue-600 !left-0 -translate-y-1/2 !hidden md:!flex">
             <span className="sr-only">Previous</span>
           </div>
-          <div className="md:w-[92%] m-auto">
+          <div className="w-full md:w-[92%] m-auto">
             <Swiper
-              modules={[Navigation, Pagination, EffectCoverflow]}
-              spaceBetween={24}
-              slidesPerView={2}
-              centeredSlides={true}
+              modules={[Navigation, Pagination, EffectCoverflow, Autoplay]}
+              spaceBetween={16}
+              slidesPerView={1}
+              centeredSlides={false}
               loop={true}
               effect="coverflow"
               coverflowEffect={{
@@ -189,10 +189,32 @@ export default function Package() {
                 modifier: 1,
                 slideShadows: true,
               }}
+              autoplay= {{
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
               breakpoints={{
-                640: { slidesPerView: 1.2 },
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
+                480: {
+                  slidesPerView: 1,
+                  centeredSlides: true,
+                  spaceBetween: 20,
+                },
+                640: {
+                  slidesPerView: 1.2,
+                  centeredSlides: true,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  centeredSlides: true,
+                  spaceBetween: 24,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  centeredSlides: true,
+                  spaceBetween: 24,
+                },
               }}
               navigation={{
                 nextEl: ".swiper-button-next",

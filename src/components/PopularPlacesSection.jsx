@@ -189,7 +189,10 @@ const conventionHallsData = [
     name: "ORCHARD CONVENTION HALL",
     imageUrl:
       "https://otithee.sgp1.cdn.digitaloceanspaces.com/uploads/images/conventionhall/1697361865-67186442.jpg",
-    price: "Morning Shift 100,000৳ / Evening Shift 95,000 ৳",
+    priceHall: {
+      morning: { price: "50,000 ৳", shift: "Morning Shift" },
+      evening: { price: "40,000 ৳", shift: "Evening Shift" },
+    },
     description:
       "Plot 17, Road 7, Dhanmondi, Dhaka-1209, Dhanmondi, Bangladesh",
     link: "/search/51?category=conventionhall&id=51&check_in_date=2025-03-03&check_out_date=2025-03-03",
@@ -199,7 +202,10 @@ const conventionHallsData = [
     name: "Jolsha Celebration Hall by Xpressmall Hotels - Restaurant & Convention Hall",
     imageUrl:
       "https://otithee.sgp1.cdn.digitaloceanspaces.com/uploads/images/conventionhall/1692021606-44834996.jpg",
-    price: "Morning Shift 40,000৳ / Evening Shift 39,000 ৳",
+    priceHall: {
+      morning: { price: "50,000 ৳", shift: "Morning Shift" },
+      evening: { price: "30,000 ৳", shift: "Evening Shift" },
+    },
     description:
       "S.H Tower, House 35, Gausul Azam Ave, Sector 14, Uttara, Dhaka, Dhaka, Bangladesh, Uttara, Bangladesh",
     link: "/search/35?category=conventionhall&id=35&check_in_date=2025-03-03&check_out_date=2025-03-03",
@@ -209,7 +215,10 @@ const conventionHallsData = [
     name: "Graver Inn Convention Hall",
     imageUrl:
       "https://otithee.sgp1.cdn.digitaloceanspaces.com/uploads/images/conventionhall/1608988850-88204837.jpg",
-    price: "Morning Shift 50,000৳ / Evening Shift 30,000 ৳",
+    priceHall: {
+      morning: { price: "50,000 ৳", shift: "Morning Shift" },
+      evening: { price: "25,000 ৳", shift: "Evening Shift" },
+    },
     description: "East Rakhain Market,Kuakata., Kalapara, Bangladesh",
     link: "/search/12?category=conventionhall&id=12&check_in_date=2025-03-03&check_out_date=2025-03-03",
   },
@@ -218,7 +227,10 @@ const conventionHallsData = [
     name: "Crystal-2 Party Center at La Rose Hotel",
     imageUrl:
       "https://otithee.sgp1.cdn.digitaloceanspaces.com/uploads/images/conventionhall/1610208583-44476811.jpg",
-    price: "Morning Shift 50,000৳ / Evening Shift 25,000 ৳",
+    priceHall: {
+      morning: { price: "50,000 ৳", shift: "Morning Shift" },
+      evening: { price: "30,000 ৳", shift: "Evening Shift" },
+    },
     description:
       "16 Ornob, Mirer Moidan, West Darga Gate, Sylhet Sadar, Bangladesh",
     link: "/search/20?category=conventionhall&id=20&check_in_date=2025-03-03&check_out_date=2025-03-03",
@@ -228,7 +240,10 @@ const conventionHallsData = [
     name: "Kader's Convention Center",
     imageUrl:
       "https://otithee.sgp1.cdn.digitaloceanspaces.com/uploads/images/conventionhall/1694869334-33059468.jpg",
-    price: "Morning Shift 55,000৳ / Evening Shift 41,000 ৳",
+    priceHall: {
+      morning: { price: "50,000 ৳", shift: "Morning Shift" },
+      evening: { price: "30,000 ৳", shift: "Evening Shift" },
+    },
     description:
       "Hazi Ashraf Ali Super Market, House#888/1, East Shewrapara, Mirpur, Mirpur, Bangladesh, Mirpur Model, Bangladesh",
     link: "/search/40?category=conventionhall&id=40&check_in_date=2025-03-03&check_out_date=2025-03-03",

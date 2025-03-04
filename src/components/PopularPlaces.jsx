@@ -18,18 +18,24 @@ const PlaceCard = ({ place }) => {
             <Image
               src={place.imageUrl}
               alt={place.name}
-              layout="fill"
-              objectFit="cover"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="transition-transform duration-700 ease-in-out group-hover:scale-110"
             />
 
             {/* Dark overlay that appears on hover */}
             <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
 
-            {/* Price tag */}
-            <div className="absolute top-3 right-3 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium z-10">
-              {place.price.split(" ")[0]}
-            </div>
+            {place.priceHall ? (
+              <div className="absolute top-3 right-3 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium z-10">
+                {place.priceHall.morning.price.split(" ")[0]} /{" "}
+                {place.priceHall.evening.price.split(" ")[0]}
+              </div>
+            ) : (
+              <div className="absolute top-3 right-3 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium z-10">
+                {place.price.split(" ")[0]}
+              </div>
+            )}
 
             {/* Bottom gradient overlay */}
             <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/70 to-transparent"></div>
@@ -41,8 +47,26 @@ const PlaceCard = ({ place }) => {
             </h3>
             <div className="mb-3">
               <div className="flex items-center text-blue-700 font-semibold">
-                <span className="text-sm">Starting from: </span>
-                <span className="ml-1">{place.price}</span>
+                {place.priceHall ? (
+                  <div className="flex flex-col">
+                    <span className="text-sm font-bold">
+                      {place.priceHall.morning.shift}:{" "}
+                      <span className="text-blue-900">{place.priceHall.morning.price.split(" ")[0]}</span>
+                    </span>
+                    <span className="text-sm font-bold">
+                      {place.priceHall.evening.shift}:{" "}
+                      <span className="text-blue-900">{place.priceHall.evening.price.split(" ")[0]}</span>
+                    </span>
+                  </div>
+                ) : (
+                  <div>
+                    <span className="text-base">Starting from: </span>
+
+                    <span className="text-lg font-bold">
+                      {place.price.split(" ")[0]}
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
             <p className="text-gray-600 text-sm line-clamp-2 flex-grow min-h-[2.5rem]">
