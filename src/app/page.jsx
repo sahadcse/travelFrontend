@@ -18,6 +18,7 @@ export default function Home() {
         <TopDestinations />
         <ExclusiveOffers />
         <PopularPlacesSection />
+        <h2>This is test code</h2>
         <Footer />
       </main>
     </AppProvider>
