@@ -3,11 +3,15 @@
     "title": "Contact Us",
     "customerCare": {
       "label": "Customer Care",
-      "phone": "+88 017466-69174"
+      "phone": "+880 9671-971853"
     },
     "address": {
       "label": "Address",
-      "text": "Mollahpara, Tatipara, Magura Sadar, Magura, Bangladesh"
+      "text": "Level 5, Nexus Tower, Gulshan Avenue, Dhaka-1212, Bangladesh."
+    },
+    "email": {
+      "support": "support@nexusstays.com",
+      "corporate": "corporate@nexusstays.com"
     }
   },
   "quickLinks": {
@@ -15,7 +19,7 @@
     "links": [
       { "label": "Log In", "href": "/auth/login" },
       { "label": "Register", "href": "/auth/signup" },
-      { "label": "About Us", "href": "/aboutus" },
+      { "label": "About Us", "href": "/about" },
       { "label": "Payment", "href": "/payments" },
       { "label": "Account Delete", "href": "/account/delete" }
     ]
@@ -23,7 +27,7 @@
   "customerCare": {
     "title": "Customer Care",
     "links": [
-      { "label": "Contact", "href": "/contact-us" },
+      { "label": "Contact", "href": "/contact" },
       { "label": "Privacy Policy", "href": "/privacy-policy" },
       { "label": "Terms & Conditions", "href": "/terms-and-condition" },
       { "label": "FAQ", "href": "/faq" }
@@ -47,7 +51,7 @@
     "description": "Subscribe to our newsletter for the latest updates and offers.",
     "buttonText": "Subscribe"
   },
-  "copyright": "© 2025 sahad.com All rights reserved.",
+  "copyright": "NexusStays All rights reserved.",
   "socialMedia": [
     {
       "platform": "Facebook",

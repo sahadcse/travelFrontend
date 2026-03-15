@@ -1,8 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
 
-@import url("https://geist-fonts.vercel.app/stylesheet.css");
+/* @import url("https://geist-fonts.vercel.app/stylesheet.css"); */
+
+@theme {
+  --font-sans: "Inter var", "Inter", sans-serif;
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
 
 :root {
   --background: #ffffff;
@@ -45,18 +53,18 @@ html {
 }
 
 /* Responsive logo classes */
-.mini_logo {
+/* .mini_logo {
   display: none;
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .full_logo {
     display: none;
   }
   .mini_logo {
     display: block;
   }
-}
+} */
 
 /* Custom form styles */
 input[type="text"],

@@ -3,6 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
+import Link from "next/link";
 import destinationsData from "../data/destinations.js";
 
 // Import Swiper styles
@@ -50,28 +51,28 @@ const TopDestinations = () => {
           >
             {destinationsData.map((destination, index) => (
               <SwiperSlide key={index}>
-                <div className="group relative h-[300px] rounded-lg overflow-hidden">
+                <div className="group relative h-[320px] rounded-2xl md:rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out">
                   {/* Main image */}
                   <Image
                     alt={destination.alt}
                     src={destination.image}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     priority
                   />
 
                   {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300"></div>
 
                   {/* Content at bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                    <h4 className="text-xl font-bold text-white mb-2">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10 transition-transform duration-500 ease-in-out transform translate-y-3 group-hover:translate-y-0">
+                    <h4 className="text-xl font-black text-white mb-2 truncate drop-shadow-lg">
                       {destination.title}
                     </h4>
-                    <div className="flex items-center text-white/90 text-sm mb-3">
+                    <div className="flex items-center text-white/95 text-sm mb-4 font-semibold drop-shadow-md">
                       <svg
-                        className="w-4 h-4 mr-1"
+                        className="w-4 h-4 mr-1.5"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -81,30 +82,36 @@ const TopDestinations = () => {
                           clipRule="evenodd"
                         ></path>
                       </svg>
-                      {destination.location || "Explore now"}
+                      <div className="flex items-center justify-between w-full">
+                        <span>
+
+                          {destination.location || "Explore now"}
+                        </span>
+                        <span><Link
+                          href={'/search?location=' + encodeURIComponent(destination.title)}
+                          className="bg-white/95 backdrop-blur-md text-blue-600 px-5 py-2.5 rounded-full text-sm font-bold shadow-lg transition-all duration-300 transform inline-flex items-center"
+                        >
+                          Discover
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4 ml-1.5 group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M14 5l7 7m0 0l-7 7m7-7H3"
+                            />
+                          </svg>
+                        </Link></span>
+                      </div>
                     </div>
 
-                    {/* Button that appears on hover */}
-                    <button
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 inline-flex items-center"
-                      type="button"
-                    >
-                      Discover
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 ml-1"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                      </svg>
-                    </button>
+
+
                   </div>
                 </div>
               </SwiperSlide>
@@ -117,3 +124,4 @@ const TopDestinations = () => {
 };
 
 export default TopDestinations;
+

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { createContext, useState } from "react";
 
 // Create the context with a default value

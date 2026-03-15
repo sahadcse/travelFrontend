@@ -18,14 +18,14 @@
   ],
   "currencies": [
     {
-      "code": "BDT",
-      "symbol": "৳",
-      "name": "Bangladeshi Taka"
-    },
-    {
       "code": "USD",
       "symbol": "$",
       "name": "US Dollar"
+    },
+    {
+      "code": "BDT",
+      "symbol": "৳",
+      "name": "Bangladeshi Taka"
     },
     {
       "code": "EUR",
